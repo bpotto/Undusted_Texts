@@ -1,0 +1,210 @@
+html{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'AquilineTwo';
+	src: url('fonts/AquilineTwo.ttf');
+	src: url('fonts/AquilineTwo-webfont.woff');
+/* Following notes from creator of AquilineTwo font: */
+/* Manfred’s fonts are free for private and charity use. They are even free for commercial use – but if there’s any profit, pls make a donation to organizations like Doctors Without Borders.
+
+These fonts can NOT be included in any compilation CDs, disks or products, either commercial or shareware unless prior permission granted.
+
+All typefaces were created by Manfred Klein 2001-2008.*/
+}
+
+/* Display, min-height, flex-direction, and .container allow for the sticky footer*/
+body{
+    background: BurlyWood;
+    color: #000000;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; 
+    font-family: "Calibri", sans-serif;
+    width: 100%;
+}
+.container{
+    flex: 1;
+}
+div{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*Gives text a small margin from the left edge of the screen*/
+p{
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: EB Garamond;
+    font-size: 115%;
+}
+
+/*Sets fonts for lists on Publications pages*/
+ul{
+    font-family: EB Garamond;
+    font-size: 100;
+}
+li{
+    font-family: EB Garamond;
+    font-size: 125%;
+}
+
+/*Sets fonts for headers*/
+h1{
+    font-family: AquilineTwo;
+    font-size: 250%;
+}
+h2{
+    font-family: EB Garamond;
+    font-size: 200%;
+}
+#maintitle{
+    font-size: 400%;
+}
+
+/*Formats images for Books page*/
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   height: 75vh;
+   width: auto;
+   padding: 20px;
+}
+
+/*Centers any block-level text when called*/
+.ctrtxt{
+    width: 100%;
+    text-align: center;
+}
+
+/*Centers headings*/
+h1{
+    color:#000000;
+    width: 100%;
+    text-align: center;
+}
+h2{
+    color:#000000;
+    width: 100%;
+    text-align: center;
+}
+h3{
+    color:#000000;
+    width: 100%;
+    text-align: center;
+}
+h4{
+    color:#000000;
+    width: 100%;
+    text-align: center;
+}
+h5{
+    color:#000000;
+    width: 100%;
+    text-align: center;
+}
+
+
+/*Color of hyperlinks*/
+a:link{
+    color:rgb(255, 255, 255);
+}
+a:visited{
+    color:rgb(97, 96, 96);
+}
+
+/*Navigation Bar*/
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: DarkGoldenrod;
+    overflow: hidden;
+    width: 100%;
+}
+.nav li{
+    float: left;
+    border-right: 1px solid rgb(0, 0, 0);
+}
+.nav li a{
+    display: block;
+    color: #000;
+    text-align: center; 
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: EB Garamond;
+    font-size: 100%;
+}
+.nav li a:hover{
+    background-color: rgba(128, 94, 10, 0.308);
+    color: white;
+}
+.active{
+    background-color: rgb(224, 165, 15);
+}
+.nav .menu{
+    display: none;
+}
+
+
+/*On large screens, adds large margins on sides to center text on screen*/
+@media screen and (min-width: 601px){
+    p{
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+    .ctrtxt{
+        padding: 0%;
+    }
+}
+
+/*Creates drop-down vertical menu on small screens*/
+@media screen and (max-width: 600px) {
+    .nav li{float:none;}
+    .nav li a {display:none;}
+    .nav .menu {
+        display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .nav.responsive .menu{display: none;}
+    .nav.responsive li a{
+      display: block;
+    }
+  }
+
+select {
+    display: block;
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+/*Copyright Footer*/
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    background-color: DarkGoldenrod;
+    overflow: hidden;
+    color:#ffffff;
+    font-size: 0.9em;
+    font-family: EB Garamond;
+}
+
+/*Including the copyright notice in CSS means only this doc, not every page, needs to be updated each year*/
+.copyright::before{
+    content: "\00a9 2024 Brandon P. Otto.  All rights reserved.";
+}
