@@ -206,5 +206,5 @@ select {
 
 /*Including the copyright notice in CSS means only this doc, not every page, needs to be updated each year*/
 .copyright::before{
-    content: "\00a9 2024 Brandon P. Otto.  All rights reserved.";
+    content: "\00a9 2024-2025 Brandon P. Otto.  All rights reserved.";
 }
